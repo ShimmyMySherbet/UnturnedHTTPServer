@@ -508,7 +508,7 @@ namespace Plugin
             {
                 get
                 {
-                    return new List<string>() { "httpserver.start", "httpserver.stop", "httpserver.status" };
+                    return new List<string>() { "httpserver" };
                 }
             }
 
