@@ -1,7 +1,7 @@
 # UnturnedHTTPServer
 A simple HTTP server that runs as a plugin, allowing you to run a website off your server!
 
-With this plugin, you can run a simple HTTP server off of your Unturned Server. You can also manage/check the status of the http server in-game.
+With this plugin, you can run a simple HTTP server off your Unturned Server. You can also manage/check the status of the http server in-game.
 
 
 ## Permission Nodes:
@@ -29,7 +29,7 @@ With this plugin, you can run a simple HTTP server off of your Unturned Server. 
 </table>
 
 ## Commands:
-/HTTPServer is the command you use to controll the HTTP Server in-game. With it, you can Start, Stop, and Check the status of the HTTP Server.
+/HTTPServer is the command you use to control the HTTP Server in-game. With it, you can Start, Stop, and Check the status of the HTTP Server.
 
 ### Starting the Server: (Using settings in the config)
 
@@ -76,7 +76,7 @@ With this plugin, you can run a simple HTTP server off of your Unturned Server. 
   </tr>
   <tr>
     <td>RootServerFile</td>
-    <td>Specifies the root file (e.g, the file you get when going to www.domain.com), set it do %auto for auto-detect</td>
+    <td>Specifies the root file (e.g., the file you get when going to www.domain.com), set it do %auto for auto-detect</td>
   </tr>
 </table>
 
@@ -103,7 +103,7 @@ The 3 most common scopes are Local, Specific, and All.
     <td>http://*:80/</td>
   </tr>
   <tr>
-    <td>Spcific</td>
+    <td>Specific</td>
     <td>(Server IP or Domain)</td>
     <td>Allows the server to be only connected to via the key</td>
     <td>http://domain.com:80/</td>
@@ -118,17 +118,22 @@ The 3 most common scopes are Local, Specific, and All.
 
 Most People will just want to use the default, All (*).
 
+## Setup; Basic
 
-## Setup:
+This HTTP server can run off the main port of your Unturned Server. Since the ports for your server (Your base port, though to your base port + 2) are commonly TCP/UDP, this plugin can utilise the TCP connection for your server to run a http server. This also means you can use this plugin even if you’re not using a dedicated server.
 
-After seting up the plugin on your server, there are 2 more things you need to do.
+Note: I have not Thoroughly tested this for issues, but basic tests have shown no issue with running the http server on the same port as your base server itself. (I believe the base port uses UDP to query the server, so TCP is left open for the HTTP server)
+
+
+## Setup; Alternate Port.
+
+For hosting the server on an alternate port, you will need to open that port and port-forward it.
 
 ### Port Forward
 Port forward the TCP port the HTTP server is running off
 
 ### Open the port
 See <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/configuring-http-and-https">this Article</a> for info on how to do this on Windows.
-
 
 
 
